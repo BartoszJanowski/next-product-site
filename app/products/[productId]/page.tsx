@@ -10,6 +10,8 @@ export default async function ProductDetail({ params }: { params: { productId: s
   const protocol = process.env.NODE_ENV === 'development' ? 'http' : 'https';
 
   try {
+    // Future improvement: instead of calling API endpoint, we could get product from database directly.
+    // Here I wanted to show the usage of `headers()` to get the host dynamically
     const res = await fetch(`${protocol}://${host}/api/products/${productId}`);
 
     if (res.status === StatusCodes.NOT_FOUND) {
