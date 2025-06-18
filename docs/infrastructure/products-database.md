@@ -1,6 +1,6 @@
-# Products Infrastructure Documentation
+# Products Database Documentation
 
-This document describes the infrastructure setup using Docker Compose for the Products API. It includes configuration for a PostgreSQL database container.
+This document describes the local database setup using Docker Compose for the Products API. It includes configuration for a PostgreSQL database container for local testing purposes.
 
 ---
 
@@ -34,3 +34,8 @@ Mounts a Docker-managed volume for data persistence:
 volumes:
   - pgdata:/var/lib/postgresql/data
 ```
+
+#### Running Docker
+
+1. Go to `/infra/products` in your terminal.
+2. Run `docker compose up`
